@@ -1,0 +1,14 @@
+nav{
+    background: $color2;
+
+    ul{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        li{
+            list-style: none;
+        }
+    }
+
+}

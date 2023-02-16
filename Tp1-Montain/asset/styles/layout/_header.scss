@@ -1,0 +1,136 @@
+header {
+  width: 80%;
+  margin: 0 auto;
+
+  .header-container {
+    color: $white1;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateY(50px);
+    animation: 1s animHeader ease forwards;
+    animation-delay: 0.15s;
+    opacity: 0;
+
+    @keyframes animHeader {
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    h1 {
+      @include title;
+      font-size: 4rem;
+      letter-spacing: 6px;
+
+      @media screen and (max-width: 550px) {
+        font-size: 3rem;
+      }
+      @media screen and (max-width: 420px) {
+        font-size: 2.5rem;
+      }
+    }
+
+    p {
+      font-style: italic;
+      padding: 40px 0 60px;
+      width: 80%;
+      margin: 0 auto;
+      line-height: 2;
+      @media screen and (max-width: 420px) {
+        font-size: 0.8em;
+      }
+    }
+
+    i {
+      border: 1px solid $white1;
+      border-radius: 50px;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+    }
+  }
+
+  nav {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.253);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 60px;
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+
+      @media screen and (max-width: 750px) {
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
+
+    .nav-left {
+      &:hover a:not(:hover) {
+        background: none;
+        color: $white1;
+      }
+
+      a {
+        @include title;
+        padding: 0px 15px;
+        font-size: 0.8em;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        transition: 0.2s;
+        @media screen and (max-width: 450px) {
+          font-size: 0.6rem;
+        }
+
+        &:first-child {
+          background: $white1;
+          color: $black1;
+        }
+
+        &:hover {
+          background: $white1;
+          color: $black1;
+        }
+      }
+    }
+
+    .nav-right {
+      min-width: 100px;
+      width: 25%;
+      max-width: 300px;
+      justify-content: space-around;
+
+      @media screen and (max-width: 750px) {
+        display: none;
+      }
+
+      li {
+        margin-right: 10px;
+        transition: 0.2s ease-in-out;
+        font-size: 1.1rem;
+
+        &:hover {
+          transform: scale(1.5);
+          color: $grey3;
+        }
+      }
+    }
+  }
+}

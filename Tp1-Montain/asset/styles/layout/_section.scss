@@ -1,0 +1,172 @@
+main {
+  background: $white1;
+  width: 80%;
+  margin: 0 auto;
+
+  img {
+    width: 100%;
+  }
+
+  .section1 {
+    @media screen and (max-width: 1270px) {
+    }
+    @media screen and (max-width: 1120px) {
+    }
+    @media screen and (max-width: 890px) {
+    }
+
+    padding: 75px 50px;
+
+    span {
+      display: block;
+      font-family: $font2, sans-serif;
+      position: relative;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        background: $grey2;
+        height: 1px;
+        width: 37%;
+        top: 50%;
+
+        @media screen and (max-width: 750px) {
+          width: 30%;
+        }
+        @media screen and (max-width: 530px) {
+          width: 24%;
+        }
+        @media screen and (max-width: 430px) {
+          width: 15%;
+        }
+      }
+      &::before {
+        left: 0;
+      }
+      &::after {
+        right: 0;
+      }
+    }
+
+    h2 {
+      @include title;
+      font-size: 3rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      width: 60%;
+      padding: 60px 0 30px;
+      margin: 0 auto;
+      text-align: center;
+
+      @media screen and (max-width: 890px) {
+        font-size: 2.3rem;
+        padding: 60px 0 15px;
+        width: 80%;
+      }
+      @media screen and (max-width: 450px) {
+        font-size: 2.3rem;
+        padding: 60px 0 15px;
+        width: 100%;
+      }
+      @media screen and (max-width: 400px) {
+        font-size: 2rem;
+      }
+    }
+
+    p {
+      font-family: $font2;
+      width: 60%;
+      padding: 0 40px;
+      text-align: center;
+      margin: 0 auto;
+      line-height: 2.5;
+      font-style: italic;
+
+      @media screen and (max-width: 890px) {
+        // font-size: 0.9em;
+        padding: 0 0px;
+        width: 80%;
+      }
+      @media screen and (max-width: 890px) {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+      }
+    }
+    .section1-img {
+      background: url(../../img/bg.jpg) center/contain no-repeat;
+      margin: 40px auto;
+
+      @media screen and (max-width: 890px) {
+        // height: 400px;
+        // margin: 0 auto;
+      }
+
+      @media screen and (max-width: 750px) {
+        // height: 350px;
+      }
+    }
+  }
+
+  /**********SECTION2**********/
+
+  .section2-container {
+    display: flex;
+
+    @media screen and (max-width: 890px) {
+      flex-direction: column;
+      border-top: 1px solid $grey2;
+    }
+
+    h2 {
+      padding: 30px 0 15px;
+      margin: 0 50px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+      font-size: 1.3rem;
+      line-height: 1.5;
+
+      @media screen and (max-width: 1595px) {
+        margin: 0 70px;
+      }
+      @media screen and (max-width: 1330px) {
+        margin: 0 50px;
+      }
+      @media screen and (max-width: 1215px) {
+        margin: 0 0px;
+      }
+    }
+
+    .section2-left {
+      border-right: 1px solid $grey2;
+
+      @media screen and (max-width: 890px) {
+        border-right: none;
+      }
+    }
+  }
+  .s2-container {
+    padding: 70px 60px 70px;
+    border-top: 1px solid $grey2;
+
+    @media screen and (max-width: 890px) {
+      border-top: none;
+    }
+  }
+
+  p {
+    padding: 20px 0 30px;
+    text-align: left;
+    line-height: 2;
+    font-family: $font2;
+    font-style: italic;
+
+    @media screen and (max-width: 890px) {
+      padding: 20px 0px 30px;
+      font-size: 0.8em;
+    }
+  }
+}

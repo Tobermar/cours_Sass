@@ -1,0 +1,21 @@
+@font-face{
+    font-family: "font1";
+    src: url(../font/Ubuntu-M.ttf);
+}
+
+$font1: font1, sans-serif;
+$color1:skyblue;
+$color2: pink;
+$color3: black;
+
+//MIXINS
+@mixin center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    font-family: $font1;
+    background: $color1
+}

@@ -1,0 +1,74 @@
+@font-face {
+    font-family: "Inter";
+    src: url(../font/Inter-VariableFont_slnt\wght.ttf);
+}
+
+@font-face {
+    font-family: "Merriweater";
+    src: url(../font/Merriweather-Light.ttf);
+}
+
+$font1: Inter, sans-serif;
+$font2: Merriweater, sans-serif;
+
+
+$color1:rgba(0, 0, 0, 0.15);
+$color2:rgba(0, 0, 0, 0.50);
+
+@mixin center-text {
+    margin: 0 auto;
+    text-align: center;
+}
+
+@mixin center-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background: url(../img/bg.jpg) fixed center/cover;
+    font-family: $font1;
+    max-width: 90%;
+    @include center-text;
+}
+
+.date{
+    font-family: $font2, sans-serif;
+}
+
+.button{
+    color: black;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    border: 1px solid black;
+    padding: 15px 20px;
+}
+
+.button:hover{
+    box-shadow: 0 1px 5px $color2;
+}
+
+i:not(header i) {
+    font-size: 1rem;
+    color: white;
+}
+
+textarea, input{
+    resize: none;
+    outline-style: none;
+    font-size: 1.1em;
+    font-family: $font1;
+    border: 1px solid $color1;
+     border-radius: 4px;
+}

@@ -1,0 +1,52 @@
+header {
+    @include center-text;
+    color: whitesmoke;
+
+    .header-container {
+        padding: 200px 0px 80px;
+        width: 80%;
+        margin: 0 auto;
+
+        @media screen and (max-width :1220px){
+            padding: 100px 0px 80px;
+        }
+    }
+
+    h1 {
+        text-transform: uppercase;
+        font-size: 3rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        width: 50%;
+        @include center-text;
+        @media screen and (max-width :1220px){
+            width: 70%;
+        }
+        @media screen and (max-width :875px){
+            font-size: 2.5rem;
+        }
+        @media screen and (max-width :745px){
+            width: 80%;
+        }
+        @media screen and (max-width :650px){
+            width: 100%;
+        }
+    }
+
+    p {
+        font-style: oblique;
+        font-family: $font2;
+        padding: 40px 0;
+        @media screen and (max-width :875px){
+            font-size: 0.9em;
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+
+    i {
+        padding: 15px 17px;
+        border: 2px solid whitesmoke;
+        border-radius: 100px;
+    }
+}
